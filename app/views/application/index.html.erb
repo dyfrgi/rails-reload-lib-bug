@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Reload Bug Reproduction</title>
+  </head>
+  <body>
+    <dl>
+      <% @table.each do |entry| %>
+        <dt><%= entry[:t] %></dt>
+        <dd><%= entry[:d] %></dd>
+        <% end %>
+    </dl>
+  </body>
+</html>

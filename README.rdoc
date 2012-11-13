@@ -1,0 +1,8 @@
+== Library Reloading Weirdness
+
+This application renders whatever ReloadLib::test returns at its root. It does
+this by creating a constant from ReloadLib in
+config/initializers/create_constant.rb, which then has test called on it in the
+application controller.
+
+If you change ReloadLib::test, then the reloaded class won't be applied to the stored value from the initializer.
